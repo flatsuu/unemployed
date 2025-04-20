@@ -21,7 +21,7 @@ function drinkFuel() {
 
 
 function sellCans() {
-    gameData.cash += gameData.cans * 0.25
+    gameData.cash += Math.round(gameData.cans) * 0.25
     gameData.cans = 0
     update("fuelConsumed", "Fuel consumed: " + Math.round(gameData.cans) + " Cans")
     update("cashCollected", "Cash collected: " + format(gameData.cash) + " €")
