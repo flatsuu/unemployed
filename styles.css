@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Public Pixel";
+    background-image: url("https://cdn.discordapp.com/attachments/414540430009565184/1363882334322950348/GpAHoqZWkAASTfX.jpg?ex=6807a5e8&is=68065468&hm=8c4a839591b5d0975e1e208af3054cd37f45d708b86a0572b5c6a5b4621285e0&format=webp&width=753&height=750");
+    background-color: pink;
+    padding: 20px;
+    color: white;
+}
+
+/* Top-Leiste */
+#currencyDisplay {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.fuel-consumed,
+.cash-collected {
+    color: red;
+}
+
+/* Hauptbereich */
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Linke Seite: Buttons */
+.left-buttons {
+    width: 60%;
+    position: relative;
+}
+
+.drink-button {
+    width: 100%;
+    padding: 400px 20px;
+    font-size: 18px;
+    background-color: beige;
+    background-image: url("https://banner2.cleanpng.com/20180811/zlo/62993a33797cc98c4902885108d2ceef.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.drink-button:active {
+    background-color: yellow;
+    background-image: url("https://i.pinimg.com/736x/ed/fa/b8/edfab85cb1aa7a2695eea1bf5cc42e56.jpg");
+}
+
+/* Kleiner Button unten rechts */
+.sell-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px 30px;
+    font-size: 12px;
+    color: green;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sell-button:hover {
+    background-color: blue;
+}
+
+.upgrade-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.upgrade-toggle {
+    padding: 10px 200px;
+    font-family: "Public Pixel";
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.upgrade-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 200px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.upgrade-content button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-family: "Public Pixel";
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+.upgrade-content button:hover {
+    background-color: #e0e0e0;
+}
+
+.upgrade-dropdown:hover .upgrade-content {
+    display: block;
+}

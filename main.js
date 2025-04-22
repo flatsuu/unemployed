@@ -24,7 +24,7 @@ function sellCans() {
     gameData.cash += Math.round(gameData.cans) * 0.25
     gameData.cans -= Math.round(gameData.cans)
     update("fuelConsumed", "Fuel consumed: " + Math.round(gameData.cans) + " Cans")
-    update("cashCollected", "Cash collected: " + format(gameData.cash) + " €")
+    update("cashCollected", "Cash collected: " + format(gameData.cash) + "€")
 }
 
 function buyCansPerClick() {
@@ -32,7 +32,7 @@ function buyCansPerClick() {
         gameData.cash -= gameData.cansPerClickCost
         gameData.cansPerClick += 1
         gameData.cansPerClickCost *= 2
-        update("cashCollected", "Cash collected: " + format(gameData.cash) + " €")
+        update("cashCollected", "Cash collected: " + format(gameData.cash) + "€")
         update("perClickUpgrade", "Upgrade fridge (currently level " + gameData.cansPerClick +  ") Cost: " + gameData.cansPerClickCost + "€")
     }
 }
@@ -42,16 +42,17 @@ function buyAutoClick() {
         gameData.cash -= gameData.autoClickCost
         gameData.cansPerSec += 1
         gameData.autoClickCost *= 2
-        update("cashCollected", "Cash collected: " + format(gameData.cash) + " €")
+        update("cashCollected", "Cash collected: " + format(gameData.cash) + "€")
         update("autoClickUpgrade", "Upgrade auto (currently level " + gameData.cansPerSec +  ") Cost: " + gameData.autoClickCost + "€")
     }
 }
+
 
 var mainGameLoop = window.setInterval(function() {
     diff = Date.now() - gameData.lastTick;
     gameData.lastTick = Date.now() // update lastTick
 
-    gameData.cans += gameData.cansPerSec / 100
+    gameData.cans += gameData.cansPerSec * (diff / 1000)
     update("fuelConsumed", "Fuel consumed: " + Math.round(gameData.cans) + " Cans")
    
 

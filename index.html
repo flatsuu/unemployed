@@ -4,14 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legend of the Unemployed</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet">
 </head>
 <body>
-    <p id="fuelConsumed">Fuel consumed:</p>
-    <button onclick="drinkFuel()">Drink</button>
-    <p id="cashCollected">Cash collected:</p>
-    <button onclick="sellCans()">Sell Cans (0.25€ per Can)</button>
-    <button onclick="buyCansPerClick()" id="perClickUpgrade">Upgrade fridge (currently level 1) Cost: 10€</button>
-    <button onclick="buyAutoClick()" id="autoClickUpgrade">Upgrade auto (currently level 1) Cost: 5€</button>
+
+    <div class="gameContainer">
+
+        <div id="currencyDisplay">
+            <p id="fuelConsumed" class="fuel-consumed">Fuel consumed:</p>
+            <p id="cashCollected" class="cash-collected">Cash collected:</p>
+        </div>
+    
+        <div class="main-section">
+            <div class="left-buttons">
+                <button onclick="drinkFuel()" class="drink-button"></button>
+                <button onclick="sellCans()" class="sell-button">Sell Cans (0.25€ per Can)</button>
+            </div>
+    
+            <div class="upgrade-dropdown">
+                <button class="upgrade-toggle">Upgrades</button>
+                <div class="upgrade-content">
+                    <button id="perClickUpgrade" onclick="buyCansPerClick()">Upgrade fridge (Level 1 – 10€)</button>
+                    <button id="autoClickUpgrade" onclick="buyAutoClick()">Upgrade auto (Level 1 – 5€)</button>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+ 
+
+    
     <script src="main.js" charset="UTF-8" type="text/javascript"></script>
 </body>
 </html>
