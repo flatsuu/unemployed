@@ -63,8 +63,9 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: 20px 30px;
-    font-size: 12px;
+    padding: 30px 10px;
+    font-family: "Public Pixel";
+    font-size: 18px;
     color: green;
     border: none;
     cursor: pointer;
